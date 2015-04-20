@@ -15,7 +15,8 @@ public:
 	void get(int&, int&) const;
 
 	friend ostream &operator<<(ostream&, const Time&);
-	Time& operator++();
+	Time& operator++();//Pre
+	Time operator++(int);//Post+
 
 private:
 	int hour;

@@ -3,7 +3,7 @@
 #include "TimeClass.h"
 
 
-//using namespace std;
+using namespace std;
 
 
 Time::Time(int x, int y) : hour(x), min(y)
@@ -34,7 +34,24 @@ ostream &operator<<(ostream&os, const Time&v)
 	return os;
 }
 
-Time& Time::operator++()
+Time& Time::operator++()//Pre
 {
+	if (min==60)
+	{
+		min = 0;
+		++hour;
+	}
+	else if (min<60)
+	{
+		++min;
+	}
 
+	return *this;
+}
+
+Time Time::operator++(int)//post
+{
+	Time temp = (*this);
+	++(*this);
+	return temp;
 }

@@ -30,5 +30,24 @@ int main(int argc, char *argv[]) {
 	int hours, mins;									// get changed time
 	myTime.get(hours, mins);
 	cout << "Design 1 starts at " << mins << " past " << hours;   // display time in another format
+	cout << "Lets do the counter : Press enter ..";
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	cout << endl;
+	system("cls");
+	for (int i = 0; i < 200; ++i)
+	{
+		myTime++;
+		system("cls");
+		myTime.get(hours, mins);
+		int j = 1255560;
+		while (j > 0)
+		{
+			--j;
+		}
+		cout << hours << ":" << mins;
+	}
+
 
 }
